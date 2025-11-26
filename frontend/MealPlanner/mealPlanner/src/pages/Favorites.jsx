@@ -5,7 +5,7 @@ export default function Favorites() {
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/favorites")
+    axios.get("https://meal-planner-9cb0.onrender.com/api/favorites")
       .then(res => setFavorites(res.data));
   }, []);
 

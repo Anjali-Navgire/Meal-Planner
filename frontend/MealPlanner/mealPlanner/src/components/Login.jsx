@@ -13,7 +13,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // simulate backend validation
+    
     if (form.email && form.password) {
       localStorage.setItem("token", "fake-jwt-token");
       navigate("/home");

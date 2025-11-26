@@ -12,7 +12,7 @@ export default function CreateRecipe() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/recipes", {
+      await axios.post("https://meal-planner-9cb0.onrender.com/api/recipes", {
         name,
         description,
         ingredients: ingredients.split(",").map((i) => i.trim()),

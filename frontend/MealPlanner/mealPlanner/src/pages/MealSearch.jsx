@@ -15,8 +15,8 @@ function MealSearch() {
     setLoading(true);
     try {
       const [sampleRes, customRes] = await Promise.all([
-        fetch("http://localhost:5000/api/meals/sample").then((r) => r.json()),
-        fetch("http://localhost:5000/api/recipes").then((r) => r.json()),
+        fetch("https://meal-planner-9cb0.onrender.com/api/meals/sample").then((r) => r.json()),
+        fetch("https://meal-planner-9cb0.onrender.com/api/recipes").then((r) => r.json()),
       ]);
       const allMeals = [
         ...(sampleRes.meals || []),
@@ -42,7 +42,7 @@ function MealSearch() {
     setLoading(true);
     try {
       const res = await fetch(
-        `http://localhost:5000/api/meals?name=${query}`
+        `https://meal-planner-9cb0.onrender.com/api/meals?name=${query}`
       );
       const data = await res.json();
       setMeals(data.meals || []);
@@ -55,7 +55,7 @@ function MealSearch() {
  
   const addToFavorites = async (meal) => {
     try {
-      const res = await fetch("http://localhost:5000/api/favorites", {
+      const res = await fetch("https://meal-planner-9cb0.onrender.com/api/favorites", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(meal),

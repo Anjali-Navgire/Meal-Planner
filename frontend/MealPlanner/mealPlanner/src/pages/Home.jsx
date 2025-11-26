@@ -14,7 +14,7 @@ const Home = () => {
       console.error("No token found");
       return;
     }
-    axios.get("http://localhost:5000/api/auth/profile", {
+    axios.get("https://meal-planner-9cb0.onrender.com/api/auth/profile", {
       headers: {
         Authorization: `Bearer ${token}`,  // Important!
       },
