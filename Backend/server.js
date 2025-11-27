@@ -13,7 +13,7 @@ app.get("/",(req,res) => {
 
 // Middleware
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:5173", credentials: true })); 
+app.use(cors({ origin: ["http://localhost:5173","https://meal-planner-1-b0jf.onrender.com"], credentials: true })); 
 
 // for testing
 app.get('/ping', (req, res) => {
