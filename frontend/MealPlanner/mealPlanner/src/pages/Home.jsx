@@ -16,7 +16,7 @@ const Home = () => {
     }
     axios.get("https://meal-planner-9cb0.onrender.com/api/auth/profile", {
       headers: {
-        Authorization: `Bearer ${token}`,  
+        "Authorization": `Bearer ${token}`,  
       },
     })
     .then((res) => {
